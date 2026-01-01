@@ -1,2 +1,2 @@
-print("Hello World")
+Print("Hello World")
 print("Python script ran successfully via GitHub Actions")
