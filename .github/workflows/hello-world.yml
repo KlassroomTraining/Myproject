@@ -1,3 +1,11 @@
-git add .github/workflows/hello-world.yml
-git commit -m "Add GitHub Actions workflow"
-git push
+name: Hello World Workflow
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello World - GitHub Actions is working!"
