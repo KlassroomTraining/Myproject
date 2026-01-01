@@ -1,46 +1,11 @@
-name: Train ML Model
+name: Hello World Workflow
 
 on:
   push:
-    branches: [ main ]
-  schedule:
-    - cron: '0 2 * * *'   # Runs daily at 2 AM UTC
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    # Step 1: Checkout the code
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-
-    # Step 2: Setup Python
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
-
-    # Step 3: Debug - list files in repo
-    - name: List files in repo
-      run: ls -R
-
-    # Step 4: Debug - check Python version and pip
-    - name: Python info
-      run: |
-        python --version
-        pip --version
-
-    # Step 5: Install dependencies
-    - name: Install Dependencies
-      run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
-
-    # Step 6: Debug - check installed packages
-    - name: Show installed packages
-      run: pip list
-
-    # Step 7: Run training script
-    - name: Run Training Script
-      run: python train_model.py
+      - name: Say Hello
+        run: echo "Hello Good Evening- GitHub Actions is working!"
